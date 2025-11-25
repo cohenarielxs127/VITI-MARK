@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VITI-MARK | Agriculture & Arboriculture</title>
-  <meta name="description" content="VITI-MARK - Spécialiste en culture de fruits, fruits à coque et production agricole durable à Cergy, Île-de-France.">
+  <meta charset="UTF-8">
+  <title>VITI-MARK | Production de fruits & agriculture durable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VITI-MARK - Producteur de fruits et fruits à coque à Cergy, Île-de-France. Agriculture durable, vergers et production pour professionnels.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5f5f0;
-      --bg-alt: #ffffff;
-      --primary: #5b8c3b;
-      --primary-dark: #3d6027;
-      --accent: #f4b000;
-      --text: #1f2933;
-      --muted: #6b7280;
-      --border-radius-lg: 1.5rem;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.18);
+      --vert-fonce: #234224;
+      --vert: #3e7c38;
+      --vert-clair: #cde5c8;
+      --beige: #faf3e6;
+      --blanc: #ffffff;
+      --texte: #1f2933;
+      --gris: #6b7280;
+      --accent: #f0b429;
+      --radius: 18px;
+      --shadow: 0 16px 35px rgba(15, 23, 42, 0.2);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #fdf6e3, var(--bg));
-      color: var(--text);
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #fdf7ec 0, #f5f5f2 40%, #edf2f7 100%);
+      color: var(--texte);
       line-height: 1.7;
     }
 
@@ -44,91 +45,92 @@
       color: inherit;
     }
 
-    .page-wrapper {
-      min-height: 100vh;
+    .page {
+      max-width: 1140px;
+      margin: 0 auto;
       padding: 1.5rem 1rem 3rem;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    /* HEADER */
 
-    /* Header / Navbar */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
+    .site-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.7rem 1rem;
-      margin-bottom: 1rem;
+      padding: 0.8rem 1.2rem;
+      margin-bottom: 1.5rem;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(12px);
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 0.55rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+      gap: 0.7rem;
     }
 
-    .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #fef9c3, #4b7f31);
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: conic-gradient(from 210deg, #f6e05e, #3f7c3b, #154417, #f6e05e);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fdfdfd;
-      font-size: 0.9rem;
-      box-shadow: 0 10px 25px rgba(56, 118, 43, 0.5);
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 10px 25px rgba(34, 197, 94, 0.55);
     }
 
-    .logo-text span {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-weight: 400;
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--gris);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
-      font-size: 0.9rem;
+      gap: 1.2rem;
+      font-size: 0.85rem;
     }
 
     .nav-links a {
       position: relative;
-      color: var(--muted);
-      transition: color 0.2s ease;
+      padding-bottom: 0.15rem;
+      color: var(--gris);
+      transition: color 0.18s ease;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.25rem;
+      bottom: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
       border-radius: 999px;
-      transition: width 0.2s ease;
+      background: linear-gradient(90deg, var(--vert), var(--accent));
+      transition: width 0.18s ease;
     }
 
     .nav-links a:hover {
-      color: var(--primary-dark);
+      color: var(--vert-fonce);
     }
 
     .nav-links a:hover::after {
@@ -136,406 +138,415 @@
     }
 
     .nav-cta {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.2rem;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fefefe;
-      font-size: 0.85rem;
-      font-weight: 500;
+      background: linear-gradient(135deg, var(--vert-fonce), var(--vert));
+      color: var(--blanc);
+      font-size: 0.8rem;
+      font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.4);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.5);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      white-space: nowrap;
     }
 
     .nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(16, 185, 129, 0.55);
+      box-shadow: 0 16px 40px rgba(21, 128, 61, 0.7);
     }
 
-    /* Hero */
+    /* HERO */
 
     .hero {
-      margin-top: 1.5rem;
       display: grid;
-      gap: 2.2rem;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.2rem;
+      margin-bottom: 3rem;
       align-items: center;
     }
 
-    .hero-text-badge {
+    .hero-intro-tag {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.2rem 0.7rem;
+      gap: 0.45rem;
+      padding: 0.25rem 0.9rem;
       border-radius: 999px;
-      background: rgba(22, 163, 74, 0.08);
-      color: var(--primary-dark);
+      background: rgba(34, 197, 94, 0.06);
       font-size: 0.75rem;
+      color: var(--vert-fonce);
+      border: 1px solid rgba(74, 222, 128, 0.35);
       margin-bottom: 1rem;
     }
 
-    .hero-text-badge span.dot {
-      width: 7px;
-      height: 7px;
+    .hero-intro-tag span {
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: var(--accent);
+      background: #16a34a;
+      box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.35);
     }
 
-    .hero h1 {
-      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-      font-size: clamp(2.2rem, 4vw, 3.1rem);
+    .hero-title {
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(2.1rem, 3.7vw, 3rem);
       line-height: 1.1;
-      margin-bottom: 1rem;
-      letter-spacing: 0.02em;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.01em;
     }
 
-    .hero h1 span {
-      color: var(--primary-dark);
+    .hero-title span {
+      color: var(--vert-fonce);
     }
 
-    .hero-subtitle {
-      font-size: 0.95rem;
-      color: var(--muted);
+    .hero-text {
+      font-size: 0.96rem;
+      color: var(--gris);
       max-width: 34rem;
       margin-bottom: 1.4rem;
+    }
+
+    .hero-highlight {
+      display: inline-block;
+      padding: 0.15rem 0.4rem;
+      border-radius: 0.5rem;
+      background: rgba(250, 204, 21, 0.13);
+      color: #92400e;
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.5rem;
     }
 
-    .btn-primary {
-      padding: 0.7rem 1.5rem;
+    .btn-main {
+      padding: 0.7rem 1.7rem;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fefefe;
-      font-weight: 500;
+      background: linear-gradient(135deg, var(--vert), var(--accent));
+      color: var(--blanc);
       font-size: 0.9rem;
+      font-weight: 600;
       cursor: pointer;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow);
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .btn-primary:hover {
+    .btn-main:hover {
       transform: translateY(-1px);
-      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.25);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.25);
     }
 
-    .btn-outline {
-      padding: 0.7rem 1.3rem;
+    .btn-ghost {
+      padding: 0.7rem 1.4rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.9);
-      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.95);
+      background: rgba(255, 255, 255, 0.9);
       font-size: 0.85rem;
       font-weight: 500;
-      color: var(--text);
+      color: var(--texte);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
-      transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+      transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
     }
 
-    .btn-outline:hover {
-      border-color: var(--primary);
-      background: rgba(248, 250, 252, 1);
-      box-shadow: 0 14px 32px rgba(148, 163, 184, 0.45);
+    .btn-ghost:hover {
+      border-color: var(--vert);
+      background: #f9fafb;
+      box-shadow: 0 16px 34px rgba(148, 163, 184, 0.45);
     }
 
-    .hero-meta {
+    .hero-points {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
+      gap: 1.3rem;
+      font-size: 0.84rem;
+      color: var(--gris);
     }
 
-    .hero-meta span {
-      display: inline-flex;
+    .hero-points-item {
+      display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
     }
 
-    .hero-meta span::before {
-      content: "●";
-      font-size: 0.6rem;
-      color: var(--primary);
+    .hero-points-item::before {
+      content: "✓";
+      font-size: 0.85rem;
+      color: var(--vert);
+      font-weight: 600;
     }
 
-    /* Hero visual */
-
-    .hero-visual {
+    .hero-media {
       position: relative;
     }
 
-    .hero-card {
-      border-radius: var(--border-radius-lg);
+    .hero-photo-main {
+      border-radius: 26px;
       overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      background: var(--bg-alt);
+      box-shadow: var(--shadow);
       position: relative;
     }
 
-    .hero-card img {
+    .hero-photo-main img {
+      height: 270px;
       width: 100%;
-      height: 260px;
       object-fit: cover;
     }
 
-    .hero-card-overlay {
+    .hero-photo-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.65), transparent 55%);
+      background: linear-gradient(to top, rgba(17, 24, 39, 0.7), transparent 40%);
     }
 
-    .hero-card-content {
+    .hero-photo-text {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      padding: 1.1rem 1.2rem;
+      left: 1.2rem;
+      bottom: 1.1rem;
       color: #f9fafb;
+      font-size: 0.85rem;
     }
 
-    .hero-card-title {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 1.1rem;
+    .hero-photo-text strong {
+      display: block;
+      font-size: 1.05rem;
       margin-bottom: 0.15rem;
     }
 
-    .hero-card-sub {
-      font-size: 0.8rem;
-      color: rgba(226, 232, 240, 0.9);
-      margin-bottom: 0.7rem;
-    }
-
-    .hero-chip-row {
+    .hero-photo-labels {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      font-size: 0.7rem;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+      font-size: 0.72rem;
     }
 
-    .hero-chip {
-      padding: 0.25rem 0.6rem;
+    .hero-photo-labels span {
+      padding: 0.2rem 0.6rem;
       border-radius: 999px;
-      border: 1px solid rgba(226, 232, 240, 0.7);
-      background: rgba(15, 23, 42, 0.55);
-      backdrop-filter: blur(6px);
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(209, 250, 229, 0.45);
     }
 
-    .stat-badge {
+    .hero-badge {
       position: absolute;
-      right: 0.6rem;
-      top: 0.6rem;
-      padding: 0.4rem 0.7rem;
+      right: 0.8rem;
+      top: -0.9rem;
+      padding: 0.6rem 0.9rem;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.78);
-      font-size: 0.7rem;
-      color: #bbf7d0;
+      background: var(--blanc);
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.2);
+      font-size: 0.76rem;
       display: flex;
-      align-items: center;
-      gap: 0.25rem;
+      flex-direction: column;
+      gap: 0.2rem;
+      border: 1px solid rgba(226, 232, 240, 0.9);
     }
 
-    .stat-badge span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #22c55e;
+    .hero-badge strong {
+      font-size: 0.9rem;
+      color: var(--vert-fonce);
     }
 
-    .mini-card-group {
+    .hero-gallery {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem;
+      gap: 0.6rem;
       margin-top: 0.9rem;
     }
 
-    .mini-card {
-      border-radius: 0.9rem;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 0.6rem 0.7rem;
-      font-size: 0.75rem;
-      box-shadow: 0 10px 25px rgba(148, 163, 184, 0.4);
+    .hero-gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: #000;
     }
 
-    .mini-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
+    .hero-gallery-item img {
+      height: 95px;
+      width: 100%;
+      object-fit: cover;
+      filter: saturate(1.05);
     }
 
-    .mini-value {
-      font-weight: 600;
-      font-size: 0.85rem;
-      color: var(--primary-dark);
-    }
-
-    /* Sections */
+    /* SECTIONS GÉNÉRIQUES */
 
     section {
-      margin-top: 3.5rem;
+      margin-bottom: 3.2rem;
     }
 
     .section-header {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-end;
     }
 
-    .section-header h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.7rem;
+    .section-title {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.65rem;
     }
 
-    .section-header p {
+    .section-sub {
       font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 28rem;
+      color: var(--gris);
+      max-width: 30rem;
     }
 
-    /* About */
+    /* À PROPOS */
 
-    .about-grid {
+    .apropos-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
       gap: 1.8rem;
     }
 
-    .about-card {
-      background: var(--bg-alt);
-      border-radius: var(--border-radius-lg);
-      padding: 1.5rem 1.6rem;
-      box-shadow: var(--shadow-soft);
+    .card {
+      background: var(--blanc);
+      padding: 1.4rem 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 15px 32px rgba(15, 23, 42, 0.12);
       border: 1px solid rgba(226, 232, 240, 0.9);
     }
 
-    .about-card p {
+    .card p {
       font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
+      color: var(--gris);
+      margin-bottom: 0.9rem;
     }
 
-    .about-list {
+    .list-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem;
-      font-size: 0.85rem;
+      gap: 0.8rem 1rem;
+      font-size: 0.86rem;
     }
 
-    .about-list li {
-      list-style: none;
+    .list-grid-item {
       display: flex;
-      align-items: flex-start;
       gap: 0.45rem;
-      color: var(--text);
+      align-items: flex-start;
     }
 
-    .about-list li::before {
-      content: "⟡";
-      color: var(--primary);
-      font-size: 0.8rem;
-      margin-top: 0.1rem;
+    .list-grid-item span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--vert);
+      margin-top: 0.3rem;
     }
 
-    .about-side {
+    .list-grid-item div {
+      color: var(--texte);
+    }
+
+    .info-box {
+      background: linear-gradient(145deg, var(--beige), #ffffff);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      font-size: 0.86rem;
+      border: 1px dashed rgba(148, 163, 184, 0.9);
       display: grid;
-      gap: 0.9rem;
+      gap: 0.7rem;
     }
 
-    .pill-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 1.1rem;
-      padding: 0.9rem 1rem;
-      font-size: 0.8rem;
-      border: 1px dashed rgba(148, 163, 184, 0.8);
+    .info-box h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+      color: var(--vert-fonce);
     }
 
-    .pill-card strong {
-      display: block;
-      font-size: 0.85rem;
-      margin-bottom: 0.3rem;
+    .info-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.09);
+      font-size: 0.75rem;
+      color: var(--vert-fonce);
     }
 
-    /* Crops / Products */
+    /* CULTURES / EXPERTISE */
 
-    .crops-grid {
+    .expertise-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.2rem;
     }
 
-    .crop-card {
-      background: var(--bg-alt);
-      border-radius: 1.2rem;
+    .expertise-card {
+      background: var(--blanc);
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.16);
+      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.14);
       display: flex;
       flex-direction: column;
+      border: 1px solid rgba(226, 232, 240, 0.95);
     }
 
-    .crop-card img {
-      height: 140px;
+    .expertise-card img {
+      height: 130px;
       object-fit: cover;
+      width: 100%;
     }
 
-    .crop-body {
-      padding: 0.9rem 1rem 1.05rem;
+    .expertise-body {
+      padding: 0.95rem 1rem 1.1rem;
     }
 
-    .crop-label {
+    .expertise-label {
       font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      margin-bottom: 0.25rem;
+      letter-spacing: 0.15em;
+      color: var(--gris);
+      margin-bottom: 0.3rem;
     }
 
-    .crop-title {
+    .expertise-title {
       font-weight: 600;
       margin-bottom: 0.35rem;
       font-size: 0.95rem;
+      color: var(--vert-fonce);
     }
 
-    .crop-body p {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
+    .expertise-body p {
+      font-size: 0.83rem;
+      color: var(--gris);
+      margin-bottom: 0.6rem;
     }
 
-    .tag-row {
+    .chips-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.7rem;
+      gap: 0.35rem;
+      font-size: 0.72rem;
     }
 
-    .tag {
-      padding: 0.2rem 0.55rem;
+    .chip {
+      padding: 0.22rem 0.55rem;
       border-radius: 999px;
-      background: rgba(226, 232, 240, 0.8);
-      color: var(--text);
+      background: rgba(226, 232, 240, 0.95);
     }
 
-    /* Sustainability */
+    /* ENGAGEMENTS / DURABILITÉ */
 
-    .sustain-grid {
+    .engagements {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.5rem;
+      gap: 1.8rem;
     }
 
     .steps {
@@ -543,110 +554,113 @@
       gap: 0.9rem;
     }
 
-    .step {
+    .step-item {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: 0.6rem 0.8rem;
+      gap: 0.5rem 0.8rem;
       align-items: flex-start;
-      font-size: 0.85rem;
-      padding: 0.7rem 0.8rem;
-      border-radius: 1rem;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid rgba(226, 232, 240, 0.9);
+      padding: 0.85rem 1rem;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: var(--radius);
+      border: 1px solid rgba(226, 232, 240, 0.95);
     }
 
-    .step-index {
-      width: 24px;
-      height: 24px;
+    .step-num {
+      width: 28px;
+      height: 28px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #fef9c3, var(--primary));
-      color: #fefefe;
+      background: radial-gradient(circle at 20% 10%, #fef9c3, var(--vert));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 600;
+      color: #fdfdfd;
+      font-size: 0.8rem;
+      font-weight: 700;
     }
 
-    .step h4 {
-      font-size: 0.9rem;
-      margin-bottom: 0.15rem;
+    .step-item h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+      color: var(--vert-fonce);
     }
 
-    .step p {
-      color: var(--muted);
+    .step-item p {
+      font-size: 0.84rem;
+      color: var(--gris);
     }
 
-    .metrics-card {
-      background: linear-gradient(145deg, #14532d, #166534);
-      border-radius: var(--border-radius-lg);
-      padding: 1.1rem 1.25rem;
-      color: #e5f9ee;
-      box-shadow: 0 20px 40px rgba(22, 163, 74, 0.5);
+    .engagement-panel {
+      border-radius: var(--radius);
+      padding: 1.2rem 1.3rem;
+      background: linear-gradient(140deg, #14532d, #166534, #15803d);
+      color: #ecfdf5;
+      box-shadow: 0 20px 42px rgba(22, 163, 74, 0.55);
+      font-size: 0.86rem;
+      display: grid;
+      gap: 0.9rem;
     }
 
-    .metrics-card h3 {
-      font-family: "Playfair Display", serif;
+    .engagement-panel h3 {
+      font-family: "Lora", Georgia, serif;
       font-size: 1.1rem;
-      margin-bottom: 0.6rem;
     }
 
-    .metric-row {
+    .metrics-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
-      font-size: 0.8rem;
     }
 
     .metric {
-      padding: 0.5rem 0.7rem;
-      border-radius: 0.9rem;
-      background: rgba(15, 23, 42, 0.2);
-      min-width: 120px;
+      border-radius: 999px;
+      padding: 0.45rem 0.75rem;
+      background: rgba(15, 23, 42, 0.22);
+      font-size: 0.78rem;
+      min-width: 130px;
     }
 
     .metric strong {
       display: block;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     .metric span {
-      font-size: 0.7rem;
       opacity: 0.8;
+      font-size: 0.72rem;
     }
 
-    /* Contact */
+    /* CONTACT */
 
-    .contact-grid {
+    .contact-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.8rem;
+      gap: 1.9rem;
       align-items: flex-start;
     }
 
     .contact-card {
-      background: var(--bg-alt);
-      border-radius: var(--border-radius-lg);
-      padding: 1.5rem 1.6rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: var(--blanc);
+      padding: 1.4rem 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(226, 232, 240, 0.95);
     }
 
     .contact-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 0.5rem;
     }
 
     .contact-card p {
-      font-size: 0.85rem;
-      color: var(--muted);
+      font-size: 0.86rem;
+      color: var(--gris);
       margin-bottom: 1rem;
     }
 
     form {
       display: grid;
-      gap: 0.9rem;
-      font-size: 0.85rem;
+      gap: 0.8rem;
+      font-size: 0.84rem;
     }
 
     label {
@@ -661,18 +675,18 @@
       border-radius: 0.8rem;
       border: 1px solid rgba(209, 213, 219, 1);
       padding: 0.55rem 0.75rem;
-      font-family: inherit;
       font-size: 0.85rem;
+      font-family: inherit;
+      background: rgba(249, 250, 251, 0.95);
       outline: none;
-      background: rgba(249, 250, 251, 0.9);
-      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
     }
 
     input:focus,
     textarea:focus {
-      border-color: var(--primary);
       background: #ffffff;
-      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5);
+      border-color: var(--vert);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.6);
     }
 
     textarea {
@@ -680,79 +694,88 @@
       resize: vertical;
     }
 
-    .contact-info {
+    .contact-infos {
       display: grid;
-      gap: 0.6rem;
-      font-size: 0.85rem;
+      gap: 0.7rem;
+      font-size: 0.86rem;
     }
 
-    .contact-info-item {
+    .contact-item {
       display: flex;
       align-items: flex-start;
-      gap: 0.5rem;
-      color: var(--muted);
+      gap: 0.6rem;
+      color: var(--gris);
     }
 
     .contact-icon {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(148, 163, 184, 0.9);
-      font-size: 0.8rem;
-      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.95);
+      background: #ffffff;
+      font-size: 0.85rem;
     }
 
-    .contact-value a {
-      color: var(--primary-dark);
+    .contact-item strong {
+      color: var(--vert-fonce);
+      font-size: 0.86rem;
+    }
+
+    .contact-item a {
+      color: var(--vert-fonce);
       font-weight: 500;
     }
 
-    .mini-map {
+    .map-box {
       margin-top: 0.9rem;
       border-radius: 1rem;
       overflow: hidden;
       border: 1px solid rgba(209, 213, 219, 1);
+      background: #e5e7eb;
       height: 180px;
-      background-image: url("https://via.placeholder.com/600x400?text=CERGY+%7C+ILE+DE+FRANCE");
-      background-size: cover;
-      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: #374151;
     }
 
-    /* Footer */
+    /* FOOTER */
 
-    footer {
+    .site-footer {
       margin-top: 2.5rem;
       font-size: 0.78rem;
-      color: var(--muted);
+      color: var(--gris);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 0.6rem;
+      gap: 0.7rem;
     }
 
-    footer span {
-      opacity: 0.95;
+    .site-footer strong {
+      color: var(--vert-fonce);
     }
 
-    footer strong {
-      color: var(--primary-dark);
-    }
-
-    /* Responsive */
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .hero,
-      .about-grid,
-      .sustain-grid,
-      .contact-grid {
+      .apropos-layout,
+      .expertise-grid,
+      .engagements,
+      .contact-layout {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .hero-visual {
+      .hero-media {
         order: -1;
+      }
+
+      .site-header {
+        border-radius: 18px;
       }
 
       .nav-links {
@@ -761,405 +784,411 @@
     }
 
     @media (max-width: 720px) {
-      .page-wrapper {
-        padding: 1rem 0.65rem 2.5rem;
+      .page {
+        padding-inline: 0.75rem;
       }
 
-      .nav {
-        padding-inline: 0.85rem;
-      }
-
-      .crops-grid {
+      .expertise-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .list-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
     @media (max-width: 540px) {
-      .crops-grid {
+      .expertise-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .about-list {
+      .hero-gallery {
         grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <div class="container">
+  <div class="page">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-logo">VM</div>
+        <div class="brand-text">
+          <span class="brand-name">VITI-MARK</span>
+          <span class="brand-sub">Production fruitière & agricole</span>
+        </div>
+      </div>
 
-      <!-- Header / Nav -->
-      <header>
-        <nav class="nav">
-          <div class="logo">
-            <div class="logo-mark">VM</div>
-            <div class="logo-text">
-              VITI-MARK
-              <span>Agriculture & Arboriculture</span>
-            </div>
-          </div>
-          <div class="nav-links">
-            <a href="#about">À propos</a>
-            <a href="#crops">Cultures</a>
-            <a href="#sustainability">Durabilité</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-            Demander un devis
-          </button>
-        </nav>
-      </header>
+      <nav class="nav-links">
+        <a href="#apropos">À propos</a>
+        <a href="#cultures">Cultures</a>
+        <a href="#durabilite">Durabilité</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <!-- Hero -->
-      <main>
-        <section class="hero">
-          <div class="hero-text">
-            <div class="hero-text-badge">
-              <span class="dot"></span>
-              Producteur de fruits & fruits à coque – Île-de-France
-            </div>
-            <h1>
-              VITI-MARK, votre partenaire en
-              <span>production fruitière durable</span>
-            </h1>
-            <p class="hero-subtitle">
-              Spécialisée dans la <strong>culture de fruits</strong> et de
-              <strong>fruits à coque</strong>, VITI-MARK accompagne coopératives,
-              transformateurs et distributeurs avec une production traçable,
-              responsable et constante.
-            </p>
-            <div class="hero-actions">
-              <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-                Contacter notre équipe
-              </button>
-              <button class="btn-outline" onclick="document.getElementById('crops').scrollIntoView({behavior:'smooth'});">
-                Découvrir nos cultures
-              </button>
-            </div>
-            <div class="hero-meta">
-              <span>Production &amp; culture de fruits</span>
-              <span>Fruits à coque &amp; vergers</span>
-              <span>Gestion durable des terres</span>
-            </div>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Parler à un expert
+      </button>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero" id="accueil">
+        <div>
+          <div class="hero-intro-tag">
+            <span></span>
+            Producteur de fruits & fruits à coque – Île-de-France
+          </div>
+          <div class="hero-highlight">Basée à Cergy, au cœur de la vallée de l’Oise.</div>
+          <h1 class="hero-title">
+            VITI-MARK,
+            <span>un verger professionnel au service des filières agricoles</span>
+          </h1>
+          <p class="hero-text">
+            VITI-MARK accompagne les acteurs de la
+            <strong>filière fruits</strong>, des <strong>fruits à coque</strong>
+            et plus largement de l’<em>Agriculture, Forestry, Fishing and Hunting</em> avec
+            une production tracée, régulière et pensée pour les besoins des professionnels.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+              Demander une mise en relation
+            </button>
+            <button class="btn-ghost" onclick="document.getElementById('cultures').scrollIntoView({behavior:'smooth'})">
+              Voir nos cultures disponibles
+            </button>
           </div>
 
-          <div class="hero-visual">
-            <div class="hero-card">
-              <!-- Image principale (placeholder, t9der tbddlha b image men Yandex) -->
-              <img src="https://via.placeholder.com/900x600?text=VITI-MARK+Orchard" alt="Verger VITI-MARK avec arbres fruitiers" />
-              <div class="hero-card-overlay"></div>
+          <div class="hero-points">
+            <div class="hero-points-item">Production orientée B2B (coopératives, transformateurs, distribution).</div>
+            <div class="hero-points-item">Traçabilité des lots de la parcelle jusqu’à l’envoi.</div>
+            <div class="hero-points-item">Gestion durable des vergers et des ressources naturelles.</div>
+          </div>
+        </div>
 
-              <div class="stat-badge">
-                <span class="dot"></span>
-                Récoltes suivies &amp; tracées
-              </div>
-
-              <div class="hero-card-content">
-                <div class="hero-card-title">Verger &amp; fruits à coque</div>
-                <div class="hero-card-sub">
-                  Verger certifié, suivi agronomique et respect des sols.
-                </div>
-                <div class="hero-chip-row">
-                  <span class="hero-chip">Fruits de saison</span>
-                  <span class="hero-chip">Qualité export</span>
-                  <span class="hero-chip">Traçabilité terrain</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="mini-card-group">
-              <div class="mini-card">
-                <div class="mini-label">Secteurs</div>
-                <div class="mini-value">
-                  Fruit &amp; Tree Nut Farming<br />
-                  Agriculture, Forestry, Fishing &amp; Hunting
-                </div>
-              </div>
-              <div class="mini-card">
-                <div class="mini-label">Basée à</div>
-                <div class="mini-value">
-                  12 RUE DES CHAUFFOURS<br />
-                  95000 CERGY, ÎLE-DE-FRANCE
-                </div>
+        <div class="hero-media">
+          <div class="hero-photo-main">
+            <!-- IMAGE 1 -->
+            <img src="https://treevitalize.com/wp-content/uploads/2022/04/The-Best-Fruit-Trees-for-Southern-California.jpg"
+                 alt="Verger de fruitiers VITI-MARK">
+            <div class="hero-photo-overlay"></div>
+            <div class="hero-photo-text">
+              <strong>Verger VITI-MARK</strong>
+              <span>Suivi agronomique, qualité visuelle et rendement maîtrisé.</span>
+              <div class="hero-photo-labels">
+                <span>Fruit and Tree Nut Farming</span>
+                <span>Île-de-France</span>
               </div>
             </div>
           </div>
-        </section>
 
-        <!-- About -->
-        <section id="about">
-          <div class="section-header">
-            <h2>À propos de VITI-MARK</h2>
+          <div class="hero-badge">
+            <span style="font-size:0.72rem; color:var(--gris)">Adresse d’exploitation</span>
+            <strong>Cergy, 95000</strong>
+            <span style="font-size:0.72rem;">12 RUE DES CHAUFFOURS · France</span>
+          </div>
+
+          <div class="hero-gallery">
+            <!-- IMAGE 2 -->
+            <div class="hero-gallery-item">
+              <img src="https://i.ytimg.com/vi/Fc2vxx5MFPA/maxresdefault.jpg"
+                   alt="Récolte et conditionnement des fruits">
+            </div>
+            <!-- IMAGE 3 -->
+            <div class="hero-gallery-item">
+              <img src="https://i.ytimg.com/vi/IdtG0f7TQ00/maxresdefault.jpg"
+                   alt="Culture et entretien des parcelles agricoles">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- À PROPOS -->
+      <section id="apropos">
+        <div class="section-header">
+          <h2 class="section-title">Une structure tournée vers les filières professionnelles</h2>
+          <p class="section-sub">
+            VITI-MARK intervient sur la culture de fruits, les fruits à coque et la
+            production agricole au sens large, avec une logique de partenariat à long terme
+            avec les acteurs de la chaîne de valeur.
+          </p>
+        </div>
+
+        <div class="apropos-layout">
+          <article class="card">
             <p>
-              Implantée à Cergy, VITI-MARK met son savoir-faire au service
-              d’une agriculture moderne, exigeante et respectueuse de
-              l’environnement.
+              Installée à <strong>Cergy, en Île-de-France</strong>, VITI-MARK met en place des
+              vergers et des parcelles destinés à alimenter les marchés du frais, de la
+              transformation et des circuits spécialisés.
             </p>
-          </div>
+            <p>
+              L’entreprise se positionne dans les secteurs
+              <strong>Fruit and Tree Nut Farming</strong>, <strong>Crop Production</strong>
+              et plus largement <strong>Agriculture, Forestry, Fishing and Hunting</strong>,
+              avec un suivi technique et une vision orientée rendement &amp; qualité.
+            </p>
 
-          <div class="about-grid">
-            <div class="about-card">
+            <div class="list-grid">
+              <div class="list-grid-item">
+                <span></span>
+                <div>Gestion des vergers (plantation, entretien, taille, récolte).</div>
+              </div>
+              <div class="list-grid-item">
+                <span></span>
+                <div>Adaptation des volumes &amp; calibres selon les cahiers des charges clients.</div>
+              </div>
+              <div class="list-grid-item">
+                <span></span>
+                <div>Organisation de la production pour les flux réguliers et les pics saisonniers.</div>
+              </div>
+              <div class="list-grid-item">
+                <span></span>
+                <div>Accompagnement des projets de développement et de diversification.</div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="info-box">
+            <div>
+              <h3>VITI-MARK en bref</h3>
               <p>
-                Notre activité couvre la <strong>culture de fruits</strong>,
-                la <strong>production de fruits à coque</strong> ainsi que
-                la gestion globale de parcelles agricoles dans le secteur
-                plus large <em>Agriculture, Forestry, Fishing and Hunting</em>.
+                <strong>Adresse :</strong><br>
+                12 RUE DES CHAUFFOURS<br>
+                95000 CERGY, ÎLE-DE-FRANCE – France
               </p>
+            </div>
+            <div>
+              <div class="info-tag">Secteurs d’activité</div>
+              <p style="margin-top:0.2rem;">
+                Fruit and Tree Nut Farming · Crop Production · Agriculture, Forestry, Fishing and Hunting.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CULTURES / EXPERTISE -->
+      <section id="cultures">
+        <div class="section-header">
+          <h2 class="section-title">Nos cultures & domaines d’intervention</h2>
+          <p class="section-sub">
+            Une offre pensée pour les coopératives, industriels, distributeurs
+            et structures de transformation à la recherche de volumes réguliers, traçables
+            et techniquement suivis.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card">
+            <img src="https://treevitalize.com/wp-content/uploads/2022/04/The-Best-Fruit-Trees-for-Southern-California.jpg"
+                 alt="Verger de fruits frais">
+            <div class="expertise-body">
+              <div class="expertise-label">Verger</div>
+              <h3 class="expertise-title">Fruits frais de verger</h3>
               <p>
-                Nous travaillons en étroite collaboration avec nos partenaires
-                pour garantir une production régulière, conforme aux cahiers des
-                charges et adaptée aux besoins des marchés.
+                Production de fruits destinés au marché du frais ou aux circuits spécialisés,
+                avec un tri adapté et une attention particulière à la qualité visuelle.
               </p>
-
-              <ul class="about-list">
-                <li>Culture sous suivi agronomique et contrôle qualité.</li>
-                <li>Production orientée B2B (coopératives, transformateurs, distribution).</li>
-                <li>Optimisation des rendements dans une logique durable.</li>
-                <li>Gestion responsable des ressources en eau et des sols.</li>
-              </ul>
-            </div>
-
-            <div class="about-side">
-              <div class="pill-card">
-                <strong>Spécialisation principale</strong>
-                Fruit and Tree Nut Farming – gestion des vergers, plantations
-                et récoltes adaptées aux besoins des clients.
-              </div>
-              <div class="pill-card">
-                <strong>Zone d’intervention</strong>
-                Basée à Cergy (Île-de-France) avec une capacité à répondre
-                aux projets régionaux, nationaux et export selon les volumes.
+              <div class="chips-row">
+                <span class="chip">Calibres adaptés</span>
+                <span class="chip">Contrôle qualité</span>
               </div>
             </div>
-          </div>
-        </section>
+          </article>
 
-        <!-- Crops / Products -->
-        <section id="crops">
-          <div class="section-header">
-            <h2>Nos cultures &amp; productions</h2>
-            <p>
-              Une offre complète de fruits et de fruits à coque,
-              avec une sélection adaptée à la transformation, au frais
-              et à la distribution spécialisée.
-            </p>
-          </div>
-
-          <div class="crops-grid">
-            <!-- Card 1 -->
-            <article class="crop-card">
-              <img src="https://via.placeholder.com/600x400?text=Orchard+Fruits" alt="Fruits de verger" />
-              <div class="crop-body">
-                <div class="crop-label">Verger</div>
-                <div class="crop-title">Fruits frais de saison</div>
-                <p>
-                  Sélection de fruits issus de vergers suivis, adaptés à la
-                  vente au frais et aux circuits de distribution spécialisés.
-                </p>
-                <div class="tag-row">
-                  <span class="tag">Qualité triée</span>
-                  <span class="tag">Traçabilité</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="crop-card">
-              <img src="https://via.placeholder.com/600x400?text=Tree+Nuts" alt="Fruits à coque" />
-              <div class="crop-body">
-                <div class="crop-label">Tree Nut Farming</div>
-                <div class="crop-title">Fruits à coque</div>
-                <p>
-                  Production de fruits à coque pour la transformation,
-                  la torréfaction, l’agroalimentaire et les marchés
-                  spécialisés.
-                </p>
-                <div class="tag-row">
-                  <span class="tag">Sélection lot</span>
-                  <span class="tag">Volumes B2B</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="crop-card">
-              <img src="https://via.placeholder.com/600x400?text=Agriculture+Fields" alt="Parcelles agricoles VITI-MARK" />
-              <div class="crop-body">
-                <div class="crop-label">Agriculture</div>
-                <div class="crop-title">Production agricole &amp; parcelles</div>
-                <p>
-                  Gestion de cultures au sein de l’écosystème
-                  Agriculture, Forestry, Fishing and Hunting avec une
-                  approche orientée rendement &amp; durabilité.
-                </p>
-                <div class="tag-row">
-                  <span class="tag">Suivi technique</span>
-                  <span class="tag">Gestion de parcelles</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- Sustainability -->
-        <section id="sustainability">
-          <div class="section-header">
-            <h2>Durabilité &amp; traçabilité</h2>
-            <p>
-              La performance agricole ne doit pas se faire au détriment
-              des sols. VITI-MARK place la gestion durable au cœur de son modèle.
-            </p>
-          </div>
-
-          <div class="sustain-grid">
-            <div class="steps">
-              <div class="step">
-                <div class="step-index">01</div>
-                <div>
-                  <h4>Gestion raisonnée des traitements</h4>
-                  <p>
-                    Mise en œuvre de pratiques limitant l’usage
-                    des intrants, avec un suivi régulier des parcelles
-                    et interventions ciblées.
-                  </p>
-                </div>
-              </div>
-
-              <div class="step">
-                <div class="step-index">02</div>
-                <div>
-                  <h4>Suivi des rendements &amp; de la qualité</h4>
-                  <p>
-                    Indicateurs de rendement, de calibre, de qualité
-                    visuelle et gustative pour s’aligner avec les cahiers
-                    des charges clients.
-                  </p>
-                </div>
-              </div>
-
-              <div class="step">
-                <div class="step-index">03</div>
-                <div>
-                  <h4>Traçabilité des lots</h4>
-                  <p>
-                    Historique des parcelles, des pratiques agricoles et
-                    des volumes pour garantir une traçabilité complète
-                    des lots livrés.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="metrics-card">
-              <h3>Un partenaire fiable pour vos chaînes d’approvisionnement</h3>
-              <p style="font-size:0.85rem; margin-bottom:0.8rem;">
-                VITI-MARK s’intègre dans les chaînes de valeur agricoles
-                en offrant visibilité, régularité et transparence.
-              </p>
-              <div class="metric-row">
-                <div class="metric">
-                  <strong>Traçabilité</strong>
-                  <span>Lots suivis de la parcelle au client.</span>
-                </div>
-                <div class="metric">
-                  <strong>Qualité</strong>
-                  <span>Contrôles visuels et agronomiques.</span>
-                </div>
-                <div class="metric">
-                  <strong>Flexibilité</strong>
-                  <span>Adaptation aux besoins des volumes &amp; calibres.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-          <div class="section-header">
-            <h2>Nous contacter</h2>
-            <p>
-              Un projet, un besoin spécifique ou une demande d’information
-              sur nos cultures ? Écrivez-nous ou planifiez un échange avec notre équipe.
-            </p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-card">
-              <h3>Parlez-nous de votre besoin</h3>
+          <article class="expertise-card">
+            <img src="https://i.ytimg.com/vi/Fc2vxx5MFPA/maxresdefault.jpg"
+                 alt="Production de fruits à coque">
+            <div class="expertise-body">
+              <div class="expertise-label">Tree Nut Farming</div>
+              <h3 class="expertise-title">Fruits à coque</h3>
               <p>
-                Remplissez ce formulaire de contact et nous reviendrons vers
-                vous dans les meilleurs délais pour étudier votre projet.
+                Lots de fruits à coque pour la transformation, la torréfaction
+                et les marchés agroalimentaires, avec un suivi des origines et des volumes.
               </p>
+              <div class="chips-row">
+                <span class="chip">Volumes B2B</span>
+                <span class="chip">Lots homogènes</span>
+              </div>
+            </div>
+          </article>
 
-              <form>
-                <div>
-                  <label for="name">Nom / Société</label>
-                  <input type="text" id="name" name="name" placeholder="Votre nom ou raison sociale" required />
-                </div>
-                <div>
-                  <label for="email">Adresse e-mail</label>
-                  <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
-                </div>
-                <div>
-                  <label for="subject">Objet</label>
-                  <input type="text" id="subject" name="subject" placeholder="Demande de devis, informations, etc." />
-                </div>
-                <div>
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Décrivez votre projet, vos volumes, vos besoins…"></textarea>
-                </div>
-                <button type="submit" class="btn-primary">
-                  Envoyer ma demande
-                </button>
-              </form>
+          <article class="expertise-card">
+            <img src="https://i.ytimg.com/vi/IdtG0f7TQ00/maxresdefault.jpg"
+                 alt="Parcelles agricoles VITI-MARK">
+            <div class="expertise-body">
+              <div class="expertise-label">Agriculture</div>
+              <h3 class="expertise-title">Parcelles & production agricole</h3>
+              <p>
+                Gestion de cultures au sein de l’écosystème agricole, avec une vision
+                globale des rotations, de la fertilité des sols et des rendements.
+              </p>
+              <div class="chips-row">
+                <span class="chip">Suivi technique</span>
+                <span class="chip">Gestion des surfaces</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- DURABILITÉ -->
+      <section id="durabilite">
+        <div class="section-header">
+          <h2 class="section-title">Durabilité, traçabilité & fiabilité</h2>
+          <p class="section-sub">
+            L’objectif de VITI-MARK : concilier performance économique, maîtrise
+            agronomique et respect des ressources, pour des partenariats solides
+            et transparents.
+          </p>
+        </div>
+
+        <div class="engagements">
+          <div class="steps">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div>
+                <h3>Pratiques raisonnées sur les parcelles</h3>
+                <p>
+                  Utilisation mesurée des intrants, pilotage des interventions
+                  en fonction de l’état des vergers, observables et données de terrain.
+                </p>
+              </div>
             </div>
 
-            <div class="contact-info">
-              <div class="contact-info-item">
-                <div class="contact-icon">📍</div>
-                <div class="contact-value">
-                  <strong>Adresse</strong><br />
-                  12 RUE DES CHAUFFOURS<br />
-                  95000 CERGY, ÎLE-DE-FRANCE<br />
-                  France
-                </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div>
+                <h3>Suivi qualité et rendements</h3>
+                <p>
+                  Indicateurs sur les volumes, les calibres, la qualité visuelle et
+                  gustative pour rester aligné sur les exigences des filières.
+                </p>
               </div>
+            </div>
 
-              <div class="contact-info-item">
-                <div class="contact-icon">☎️</div>
-                <div class="contact-value">
-                  <strong>Téléphone</strong><br />
-                  <a href="tel:+33752966241">+33 7 52 96 62 41</a>
-                </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div>
+                <h3>Traçabilité des lots et transparence</h3>
+                <p>
+                  Historique des parcelles, des pratiques et des volumes, pour
+                  documenter les lots livrés et faciliter la gestion des flux.
+                </p>
               </div>
-
-              <div class="contact-info-item">
-                <div class="contact-icon">✉️</div>
-                <div class="contact-value">
-                  <strong>E-mail</strong><br />
-                  <a href="mailto:support@erventa.shop">support@erventa.shop</a>
-                </div>
-              </div>
-
-              <div class="mini-map" aria-label="Localisation Cergy Île-de-France"></div>
             </div>
           </div>
-        </section>
-      </main>
 
-      <!-- Footer -->
-      <footer>
-        <span>© <span id="year"></span> <strong>VITI-MARK</strong>. Tous droits réservés.</span>
-        <span>Industrie : Fruit and Tree Nut Farming · Crop Production · Agriculture, Forestry, Fishing and Hunting.</span>
-      </footer>
-    </div>
+          <aside class="engagement-panel">
+            <h3>Un partenaire agricole pour vos chaînes d’approvisionnement</h3>
+            <p>
+              En choisissant VITI-MARK, vous travaillez avec une structure
+              directement connectée à la réalité du terrain, capable d’anticiper
+              les contraintes saisonnières et d’accompagner vos plans de volume.
+            </p>
+            <div class="metrics-row">
+              <div class="metric">
+                <strong>Traçabilité</strong>
+                <span>Suivi des lots de la parcelle jusqu’au chargement.</span>
+              </div>
+              <div class="metric">
+                <strong>Adaptation</strong>
+                <span>Organisation des cultures selon vos besoins de marché.</span>
+              </div>
+              <div class="metric">
+                <strong>Visibilité</strong>
+                <span>Dialogue régulier sur les estimations de récolte et la qualité.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-header">
+          <h2 class="section-title">Entrer en contact avec VITI-MARK</h2>
+          <p class="section-sub">
+            Un projet, une demande de volumes ou une question sur nos capacités ?
+            Décrivez votre besoin et nous organiserons un échange dédié.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <article class="contact-card">
+            <h3>Envoyer une demande</h3>
+            <p>
+              Ce formulaire vous permet de présenter votre structure, vos
+              contraintes de volumes et vos attentes. VITI-MARK vous répondra
+              dans les meilleurs délais.
+            </p>
+            <form>
+              <div>
+                <label for="nom">Nom / Société</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom ou raison sociale" required>
+              </div>
+              <div>
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+              </div>
+              <div>
+                <label for="sujet">Objet</label>
+                <input type="text" id="sujet" name="sujet" placeholder="Demande de devis, informations, volume...">
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Présentez votre activité, vos volumes et vos attentes."></textarea>
+              </div>
+              <button type="submit" class="btn-main">Envoyer ma demande</button>
+            </form>
+          </article>
+
+          <aside class="contact-infos">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Adresse d’exploitation</strong><br>
+                12 RUE DES CHAUFFOURS<br>
+                95000 CERGY, ÎLE-DE-FRANCE<br>
+                France
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">☎️</div>
+              <div>
+                <strong>Téléphone</strong><br>
+                <a href="tel:+33752966241">+33 7 52 96 62 41</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>E-mail</strong><br>
+                <a href="mailto:support@erventa.shop">support@erventa.shop</a>
+              </div>
+            </div>
+
+            <div class="map-box">
+              12 RUE DES CHAUFFOURS · 95000 CERGY · ÎLE-DE-FRANCE – France
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <span>© <span id="year"></span> <strong>VITI-MARK</strong>. Tous droits réservés.</span>
+      <span>Fruit and Tree Nut Farming · Crop Production · Agriculture, Forestry, Fishing and Hunting.</span>
+    </footer>
   </div>
 
   <script>
-    // Mettre l'année automatiquement
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
